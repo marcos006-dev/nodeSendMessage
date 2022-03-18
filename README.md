@@ -5,4 +5,5 @@ Pasos para correr correctamente el servidor
 -USER_PASSWORD
 
 2)Ejecutar el comando npm i para instalar los modulos
+
 3)Ejecutar el comando npm run dev para iniciar el servidor
