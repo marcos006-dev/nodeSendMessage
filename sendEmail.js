@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const path = require('path');
 
-module.exports = function () {
+module.exports = function (nombreArchivo) {
   return new Promise(function (resolve, reject) {
     // config mail
     let transporter = nodemailer.createTransport({
@@ -15,13 +15,13 @@ module.exports = function () {
     // read file and send
     let mailOptions = {
       from: 'francomarcos416@gmail.com',
-      to: 'lonytmp+guehm@gmail.com',
+      to: 'nekofa3084@siberpay.com',
       //   subject: `${date.toLocaleDateString()}`,
-      html: `Envio de archivo de texto`,
+      html: `Archivo enviado: ${nombreArchivo}`,
       attachments: [
         {
-          filename: `prueba.txt`,
-          path: path.join(__dirname, `./archives/prueba.txt`),
+          filename: `${nombreArchivo}`,
+          path: path.join(__dirname, `./archives/${nombreArchivo}.txt`),
           contentType: 'text/plain',
         },
       ],
